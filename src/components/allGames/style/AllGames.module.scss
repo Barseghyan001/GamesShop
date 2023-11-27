@@ -1,0 +1,188 @@
+:root {
+    --size: calc(1vh + 1vw)
+}
+
+.games {
+    width: clamp(390px, 50%, 1000px);
+    margin: auto;
+
+
+}
+
+.gamesContent {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    list-style: none;
+    overflow: hidden;
+    padding: 2px;
+    box-shadow: 0px 0px 10px 0px orangered;
+    -webkit-animation: color-change-2x 2s linear infinite alternate both;
+    animation: color-change-2x 2s linear infinite alternate both;
+    border-radius: 15px;
+
+
+}
+
+.Cardli {
+    width: calc(var(--size) * 10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 15px;
+    text-align: center;
+
+
+    img {
+        object-fit: contain;
+        max-width: calc(var(--size) * 10);
+        border-radius: 15px;
+        transition: 0.5s ease;
+
+        &:hover {
+            transform: scale(1.1);
+           
+
+        }
+
+    }
+
+    p {
+        font-size: calc(var(--size) * 0.7);
+
+    }
+
+    button {
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px;
+        max-width: calc(var(--size) * 4);
+        background-color: seagreen;
+        transition: 0.6s ease;
+        margin-left: 2px;
+        margin-bottom: 2px;
+        z-index: 3;
+
+        &:hover {
+            background-color: greenyellow;
+
+        }
+
+
+    }
+}
+
+.gamesLi {
+
+    width: 100%;
+
+}
+
+.gamePricep {
+    max-width: 60px;
+    width: 100%;
+}
+
+.loader {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: #150909 #250404 transparent transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent transparent #b3ff00 #66ff00;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+  }
+  .loader::before {
+    width:54px;
+    height: 54px;
+    border-color: #1927f3 #1927f3 transparent transparent;
+    animation: rotation 1.5s linear infinite;
+  }
+      
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+
+
+
+
+
+
+@-webkit-keyframes color-change-2x {
+    0% {
+        background: #FFA07A;
+    }
+
+    50% {
+        background: #FF7F50;
+    }
+
+    75% {
+        background: #FFA500;
+    }
+
+    100% {
+        background: #FF8C00;
+    }
+}
+
+@keyframes color-change-2x {
+    0% {
+        background: #FFA07A;
+    }
+
+    50% {
+        background: #FF7F50;
+    }
+
+    75% {
+        background: #FFA500;
+    }
+
+    100% {
+        background: #FF8C00;
+    }
+}

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Gloock&family=Manrope:wght@400;600&family=Oswald:wght@300;500;700&family=Rakkas&family=Roboto+Condensed:wght@200;400&family=Yanone+Kaffeesatz:wght@300;500&display=swap');
+:root{
+  --size:calc(1vh + 1vw)
+}
+.header {
+  max-width: 2000px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2px;
+  
+}
+.iconsHeader {
+  font-size:calc(var(--size) * 1.2) ;
+ cursor: pointer;
+  color: wheat;
+  filter: drop-shadow(0.5px 0.6px 2px #C71585);
+  cursor: pointer;
+
+  &:hover{
+  
+   color: #b996ad;
+
+
+  }
+}
+.headerImg{
+  width: calc(var(--size)*12);
+  object-fit: contain;
+  filter: drop-shadow(0.5px 0.6px 2px #ff04a3);
+  -webkit-animation: swirl-in-fwd 0.6s ease-out both;
+	        animation: swirl-in-fwd 0.6s ease-out both;
+}
+.headerh1 {
+    color: wheat;
+    width: 100%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+    filter: drop-shadow(0.6px 0.5px 1px wheat);
+    -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+
+@-webkit-keyframes tracking-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px);
+              transform: translateZ(400px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px);
+              transform: translateZ(400px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes swirl-in-fwd {
+    0% {
+      -webkit-transform: rotate(-540deg) scale(0);
+              transform: rotate(-540deg) scale(0);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate(0) scale(1);
+              transform: rotate(0) scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes swirl-in-fwd {
+    0% {
+      -webkit-transform: rotate(-540deg) scale(0);
+              transform: rotate(-540deg) scale(0);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate(0) scale(1);
+              transform: rotate(0) scale(1);
+      opacity: 1;
+    }
+  }
