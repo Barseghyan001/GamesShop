@@ -24,7 +24,6 @@ const Drawers = () => {
 
     const { openD, items, total } = useAppSelector(state => state);
 const idificators = items.items.find((it) => it.id)
-console.log(idificators);
 
     const buyHandler = () => {
         dispatch(deleteAll(idificators?.id))
